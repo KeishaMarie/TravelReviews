@@ -1,17 +1,17 @@
-
-using System;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+ //Using for XML comments with swagger
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Travel.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Travel.Models;
-
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace Travel.Controllers
 {
+  [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
   [Route("api/[controller]")]
   [ApiController]
   public class TravelReviewsController : ControllerBase

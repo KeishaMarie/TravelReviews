@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Travel.Models
 {
   public class TravelReview
